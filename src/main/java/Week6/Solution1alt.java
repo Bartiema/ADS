@@ -1,8 +1,8 @@
-import java.util.*;
+package Week6;
 
-class Solution6alt {
+class Solution1alt {
     /**
-     * @param elements Array of integers to be sorted.
+     * @param A Array of integers to be sorted.
      */
     public static void quickSort(int[] A) {
         quickSort(A, 0, A.length - 1);
