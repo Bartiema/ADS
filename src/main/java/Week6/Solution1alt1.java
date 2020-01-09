@@ -1,8 +1,6 @@
 package Week6;
 
-import java.util.*;
-
-class Solution1alt2 {
+class Solution1alt1 {
     /**
      * @param A
      *     Array of integers to be sorted.
@@ -16,18 +14,13 @@ class Solution1alt2 {
             return;
         int H = h;
         int L = l;
-        int r = (new Random()).nextInt((h - l) + 1) + l;
-        int p = h;
-        swap(A, r, p);
-        h--;
-        while (h >= l) {
-            if (A[l] <= A[p]) {
+        for (int i = l; i < h; i++) {
+            if (A[i] < A[h]) {
+                swap(A, i, l);
                 l++;
-            } else {
-                swap(A, l, h--);
             }
         }
-        swap(A, l, p);
+        swap(A, l, h);
         quickSort(A, L, l - 1);
         quickSort(A, l + 1, H);
     }
