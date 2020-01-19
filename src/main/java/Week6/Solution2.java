@@ -14,7 +14,7 @@ public class Solution2 {
             if (i > vmax) vmax = i;
         }
 
-        Queue<Integer>[] buckets = new LinkedList[vmax - vmin + 1];
+        Queue<Integer>[] buckets = new Queue[vmax - vmin + 1];
 
         for (int v : array) {
             int i = v - vmin;

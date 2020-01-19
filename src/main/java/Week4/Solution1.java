@@ -95,7 +95,7 @@ class ArrayStack {
 
         for (int i = 0; i < size; i++) {
             Object o = elements[i];
-            builder.append(String.valueOf(o));
+            builder.append(o);
 
             if (i < size - 1) {
                 builder.append(",");

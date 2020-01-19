@@ -25,13 +25,13 @@ public class Solution3 {
             }
         });
 
-        List<Vertex> list = new ArrayList<>();
+        LinkedList<Vertex> list = new LinkedList<>();
         while (u != v) {
             if (!predecessors.containsKey(u)) return new ArrayList<>();
-            list.add(0, u);
+            list.addFirst(u);
             u = predecessors.get(u);
         }
-        list.add(0, v);
+        list.addFirst(v);
         return list;
     }
 }

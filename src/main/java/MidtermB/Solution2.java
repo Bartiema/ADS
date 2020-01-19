@@ -43,11 +43,6 @@ class Solution2 {
         int s1 = (int) Math.pow(2, height - 1) - 1;
         int s2 = (int) Math.pow(2, height) - 1;
         int min = s2 - heap.size();
-        // System.out.println("h: " + height);
-        // System.out.println("s1: " + s1);
-        // System.out.println("s2: " + s2);
-        // System.out.println("lastLevel: " + lastLevel);
-        // System.out.println("min: " + min);
         return s2 - s1 - min - 1;
     }
 }
