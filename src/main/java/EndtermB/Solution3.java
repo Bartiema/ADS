@@ -16,7 +16,7 @@ public class Solution3 {
         if (phoneNumbers == null) throw new NullPointerException();
         if (phoneNumbers.size() <= 1) return new ArrayList<>(phoneNumbers);
 
-        for (int i = 9; i >= 0; i--) {
+        for (int i = 9; i >= 2; i--) { // Assuming 06XXXXXXXX format.
             phoneNumbers = radixSortLSD(phoneNumbers, i);
         }
         return phoneNumbers;
